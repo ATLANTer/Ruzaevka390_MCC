@@ -1,7 +1,10 @@
+# -*- coding: utf-8 -*-
 import sys
+
 from PyQt5.QtWidgets import *
 from PyQt5.QtGui import QPixmap
 from MainWin_ui import Ui_MainWindow
+from settingsWindow import SettingsWin
 
 
 class MainWin(QMainWindow, Ui_MainWindow):
@@ -11,11 +14,18 @@ class MainWin(QMainWindow, Ui_MainWindow):
         self.initUI()
 
     def initUI(self):
-        logo_pm = QPixmap("SatLogo.png")
+        self.setFixedSize(707, 495)
+        logo_pm = QPixmap("./gui/SatLogo.png")
         logo = QLabel(self)
         logo.move(15, 0)
         logo.resize(300, 300)
         logo.setPixmap(logo_pm)
+        self.Actions.buttonClicked.connect(self.actionsButt)
+
+    def actionsButt(self, butt):
+        if butt.text() == "Настройки":
+            dial = SettingsWin()
+            dial.exec()
 
 
 def except_hook(cls, exception, traceback):
@@ -28,3 +38,6 @@ if __name__ == "__main__":
     ex.show()
     sys.excepthook = except_hook
     sys.exit(app.exec())
+
+
+# C:\Users\barst\PycharmProjects\YaLc_Project\gui\MainWin.ui
