@@ -14,7 +14,7 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="transive">
     <property name="geometry">
      <rect>
       <x>350</x>
@@ -30,7 +30,7 @@
      <string notr="true">Actions</string>
     </attribute>
    </widget>
-   <widget class="QPushButton" name="pushButton_2">
+   <widget class="QPushButton" name="rt_data">
     <property name="geometry">
      <rect>
       <x>350</x>
@@ -46,7 +46,7 @@
      <string notr="true">Actions</string>
     </attribute>
    </widget>
-   <widget class="QPushButton" name="pushButton_3">
+   <widget class="QPushButton" name="equip_check">
     <property name="geometry">
      <rect>
       <x>350</x>
@@ -62,7 +62,7 @@
      <string notr="true">Actions</string>
     </attribute>
    </widget>
-   <widget class="QListWidget" name="listWidget_2">
+   <widget class="QListWidget" name="momentData">
     <property name="geometry">
      <rect>
       <x>320</x>
@@ -72,7 +72,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QDateTimeEdit" name="dateTimeEdit">
+   <widget class="QDateTimeEdit" name="timeMoment">
     <property name="geometry">
      <rect>
       <x>10</x>

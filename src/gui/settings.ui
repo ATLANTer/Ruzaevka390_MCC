@@ -13,21 +13,11 @@
   <property name="windowTitle">
    <string>Настройки</string>
   </property>
-  <widget class="QListView" name="presetsView">
-   <property name="geometry">
-    <rect>
-     <x>10</x>
-     <y>10</y>
-     <width>501</width>
-     <height>91</height>
-    </rect>
-   </property>
-  </widget>
   <widget class="QSpinBox" name="p_id">
    <property name="geometry">
     <rect>
      <x>360</x>
-     <y>110</y>
+     <y>160</y>
      <width>42</width>
      <height>21</height>
     </rect>
@@ -37,7 +27,7 @@
    <property name="geometry">
     <rect>
      <x>280</x>
-     <y>110</y>
+     <y>160</y>
      <width>71</width>
      <height>20</height>
     </rect>
@@ -50,7 +40,7 @@
    <property name="geometry">
     <rect>
      <x>420</x>
-     <y>110</y>
+     <y>160</y>
      <width>93</width>
      <height>28</height>
     </rect>
@@ -156,7 +146,7 @@
     <string>Экспорт БД</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_2">
+  <widget class="QPushButton" name="clear_db">
    <property name="geometry">
     <rect>
      <x>10</x>
@@ -167,6 +157,42 @@
    </property>
    <property name="text">
     <string>Очистить БД</string>
+   </property>
+  </widget>
+  <widget class="QTableWidget" name="dataView">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>501</width>
+     <height>141</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>420</x>
+     <y>200</y>
+     <width>93</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Удалитть</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_2">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>240</y>
+     <width>231</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Восстаноить настройки по умлчанию</string>
    </property>
   </widget>
  </widget>
