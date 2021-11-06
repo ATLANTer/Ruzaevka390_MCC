@@ -19,16 +19,19 @@ class MainWin(QMainWindow, Ui_MainWindow):
         cur = self.conn.cursor()
         self.setFixedSize(707, 495)
         logo_pm = QPixmap(*cur.execute("SELECT logo FROM presets WHERE id = 1").fetchone())
-        logo = QLabel(self)
-        logo.move(15, 0)
-        logo.resize(300, 300)
-        logo.setPixmap(logo_pm)
+        self.logo = QLabel(self)
+        self.logo.move(15, 0)
+        self.logo.resize(300, 300)
+        self.logo.setPixmap(logo_pm)
         self.Actions.buttonClicked.connect(self.actionsButt)
 
     def actionsButt(self, butt):
+        cur = self.conn.cursor()
         if butt.text() == "Настройки":
             dial = SettingsWin()
             dial.exec()
+            logo_pm = QPixmap(*cur.execute("SELECT logo FROM presets WHERE id = 1").fetchone())
+            self.logo.setPixmap(logo_pm)
 
 
 def except_hook(cls, exception, traceback):

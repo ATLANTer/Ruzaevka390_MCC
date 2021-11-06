@@ -22,6 +22,9 @@
      <height>21</height>
     </rect>
    </property>
+   <property name="minimum">
+    <number>1</number>
+   </property>
   </widget>
   <widget class="QLabel" name="label">
    <property name="geometry">
@@ -39,7 +42,7 @@
   <widget class="QPushButton" name="Imp_preset">
    <property name="geometry">
     <rect>
-     <x>420</x>
+     <x>410</x>
      <y>160</y>
      <width>93</width>
      <height>28</height>
@@ -48,6 +51,9 @@
    <property name="text">
     <string>Загрузить</string>
    </property>
+   <attribute name="buttonGroup">
+    <string notr="true">db_buttons</string>
+   </attribute>
   </widget>
   <widget class="QComboBox" name="com_select">
    <property name="geometry">
@@ -137,7 +143,7 @@
    <property name="geometry">
     <rect>
      <x>10</x>
-     <y>240</y>
+     <y>280</y>
      <width>121</width>
      <height>28</height>
     </rect>
@@ -145,12 +151,15 @@
    <property name="text">
     <string>Экспорт БД</string>
    </property>
+   <attribute name="buttonGroup">
+    <string notr="true">db_buttons</string>
+   </attribute>
   </widget>
   <widget class="QPushButton" name="clear_db">
    <property name="geometry">
     <rect>
      <x>10</x>
-     <y>280</y>
+     <y>320</y>
      <width>121</width>
      <height>28</height>
     </rect>
@@ -158,6 +167,9 @@
    <property name="text">
     <string>Очистить БД</string>
    </property>
+   <attribute name="buttonGroup">
+    <string notr="true">db_buttons</string>
+   </attribute>
   </widget>
   <widget class="QTableWidget" name="dataView">
    <property name="geometry">
@@ -172,27 +184,56 @@
   <widget class="QPushButton" name="pushButton">
    <property name="geometry">
     <rect>
-     <x>420</x>
-     <y>200</y>
+     <x>410</x>
+     <y>220</y>
      <width>93</width>
      <height>28</height>
     </rect>
    </property>
    <property name="text">
-    <string>Удалитть</string>
+    <string>Удалить</string>
    </property>
+   <attribute name="buttonGroup">
+    <string notr="true">db_buttons</string>
+   </attribute>
   </widget>
   <widget class="QPushButton" name="pushButton_2">
    <property name="geometry">
     <rect>
      <x>280</x>
-     <y>240</y>
+     <y>260</y>
      <width>231</width>
      <height>28</height>
     </rect>
    </property>
    <property name="text">
-    <string>Восстаноить настройки по умлчанию</string>
+    <string>Восстаноить настройки по умолчанию</string>
+   </property>
+   <attribute name="buttonGroup">
+    <string notr="true">db_buttons</string>
+   </attribute>
+  </widget>
+  <widget class="QLineEdit" name="path2logo">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>240</y>
+     <width>251</width>
+     <height>31</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>190</y>
+     <width>281</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Невозможно удалить записи по индексу 1</string>
    </property>
   </widget>
  </widget>
@@ -200,5 +241,6 @@
  <connections/>
  <buttongroups>
   <buttongroup name="SaveButtons"/>
+  <buttongroup name="db_buttons"/>
  </buttongroups>
 </ui>
