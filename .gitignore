@@ -152,3 +152,5 @@ fabric.properties
 
 /sample.py
 /zad.py
+!/test.py
+/test.py

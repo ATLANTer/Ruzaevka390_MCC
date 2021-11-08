@@ -6,6 +6,7 @@ from PyQt5.QtGui import QPixmap
 from MainWin_ui import Ui_MainWindow
 from settingsWindow import SettingsWin
 import sqlite3
+from serial import Serial
 
 
 class MainWin(QMainWindow, Ui_MainWindow):
@@ -32,6 +33,9 @@ class MainWin(QMainWindow, Ui_MainWindow):
             dial.exec()
             logo_pm = QPixmap(*cur.execute("SELECT logo FROM presets WHERE id = 1").fetchone())
             self.logo.setPixmap(logo_pm)
+        if "на" in butt.text():
+            pass
+
 
 
 def except_hook(cls, exception, traceback):
