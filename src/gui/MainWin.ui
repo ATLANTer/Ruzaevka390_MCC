@@ -62,16 +62,6 @@
      <string notr="true">Actions</string>
     </attribute>
    </widget>
-   <widget class="QListWidget" name="momentData">
-    <property name="geometry">
-     <rect>
-      <x>320</x>
-      <y>260</y>
-      <width>371</width>
-      <height>171</height>
-     </rect>
-    </property>
-   </widget>
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
@@ -101,13 +91,23 @@
      <string notr="true">Actions</string>
     </attribute>
    </widget>
-   <widget class="QComboBox" name="comboBox">
+   <widget class="QComboBox" name="time_select">
     <property name="geometry">
      <rect>
       <x>10</x>
       <y>350</y>
       <width>231</width>
       <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="moment_data">
+    <property name="geometry">
+     <rect>
+      <x>350</x>
+      <y>240</y>
+      <width>331</width>
+      <height>201</height>
      </rect>
     </property>
    </widget>

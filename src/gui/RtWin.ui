@@ -13,7 +13,7 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <widget class="QTextBrowser" name="textBrowser">
+  <widget class="QTextBrowser" name="data_view">
    <property name="geometry">
     <rect>
      <x>10</x>
@@ -23,17 +23,30 @@
     </rect>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton">
+  <widget class="QPushButton" name="save2csv">
    <property name="geometry">
     <rect>
      <x>10</x>
      <y>280</y>
-     <width>621</width>
+     <width>581</width>
      <height>41</height>
     </rect>
    </property>
    <property name="text">
     <string>Сохранить в csv файл</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="delim">
+   <property name="geometry">
+    <rect>
+     <x>600</x>
+     <y>290</y>
+     <width>31</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>;</string>
    </property>
   </widget>
  </widget>

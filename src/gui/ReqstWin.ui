@@ -39,12 +39,12 @@
     <bool>true</bool>
    </property>
   </widget>
-  <widget class="QLabel" name="label">
+  <widget class="QLabel" name="info">
    <property name="geometry">
     <rect>
      <x>10</x>
      <y>250</y>
-     <width>55</width>
+     <width>501</width>
      <height>16</height>
     </rect>
    </property>
@@ -76,22 +76,6 @@
    </property>
    <property name="text">
     <string>;</string>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="info">
-   <property name="geometry">
-    <rect>
-     <x>10</x>
-     <y>250</y>
-     <width>281</width>
-     <height>22</height>
-    </rect>
-   </property>
-   <property name="frame">
-    <bool>false</bool>
-   </property>
-   <property name="readOnly">
-    <bool>true</bool>
    </property>
   </widget>
  </widget>

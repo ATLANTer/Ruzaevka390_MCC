@@ -20,17 +20,20 @@ class ReqstWin(QDialog, Ui_Dialog):
         self.conn_data = sqlite3.connect('./databases/raw_data.sqlite')
         self.begin.clicked.connect(self.begin_butt)
         self.save2csv.clicked.connect(self.s2scv_butt)
+        tmp = self.conn_data.execute("SELECT id FROM time_moments").fetchall()
+        self.id_count = tmp[-1][0] + 1 if tmp else 0
 
     def begin_butt(self):
         cur_p = self.conn_presets.cursor()
         cur_d = self.conn_data.cursor()
         try:
+            self.info.setText("Идёт передача, подождите! (Для остановки зажмите C)")
+            self.repaint()
             self.data_receive = list()
             ser = Serial(*cur_p.execute("SELECT com FROM presets WHERE id = 1").fetchone(), 9600)
-            ser.write("cdr\n")
+            ser.write(b"cdr\n")
             print("Begin")  # DEBUG
             pack = ''
-            self.info.setText("Идёт передача, подождите! (Для остановки зажмите C)")
             self.update()
             while pack != ";;;;;\n":
                 if not ser.inWaiting():
@@ -47,17 +50,17 @@ class ReqstWin(QDialog, Ui_Dialog):
             self.data.setPlainText("".join(self.data_receive))
             for pck in self.data_receive:
                 pck = pck.split(';')
-                if len(pck) == 12:
+                if len(pck) == 12 and pck[0] != '00.00.00':
                     if pck[8] == '':
                         pck[8] = '0'
-                    que = f"INSERT INTO time_moments(time) VALUES('{' '.join(pck[:2])}')"
+                    que = f"INSERT INTO time_moments(id, time) VALUES({self.id_count}, '{' '.join(pck[:2])}')"
                     cur_d.execute(que)
                     que = f"""INSERT INTO data
-                            (batteryV, BatteryT, obsT, latitude, longitude, altitude, rssi, freq, okrT) 
-                            VALUES({', '.join(pck[2:-1])})"""
+                            (id, batteryV, BatteryT, obsT, latitude, longitude, altitude, rssi, freq, okrT) 
+                            VALUES({self.id_count}, {', '.join(pck[2:-1])})"""
                     cur_d.execute(que)
                     self.conn_data.commit()
-            ser.write('cdw\n')
+            ser.write(b'cdw\n')
         except Exception as exc:
             print(exc)  # DEBUG
 
