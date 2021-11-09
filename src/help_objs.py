@@ -1,6 +1,7 @@
 import sys
 import glob
 import serial
+import csv
 
 
 def serial_ports():
@@ -29,6 +30,16 @@ def serial_ports():
         except (OSError, serial.SerialException):
             pass
     return result
+
+
+def csv_writer(delimiter, header, file_path, data):
+    writefile = open(file_path, 'w', newline='')
+    data.append(header)
+    data.reverse()
+    writer = csv.writer(writefile, delimiter=delimiter, quotechar='"', quoting=csv.QUOTE_MINIMAL)
+    for i in data:
+        writer.writerow(i.split(';')[:-1])
+    writefile.close()
 
 
 def main():
