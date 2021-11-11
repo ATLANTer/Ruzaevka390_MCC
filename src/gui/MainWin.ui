@@ -20,7 +20,7 @@
       <x>350</x>
       <y>20</y>
       <width>281</width>
-      <height>28</height>
+      <height>41</height>
      </rect>
     </property>
     <property name="text">
@@ -30,29 +30,13 @@
      <string notr="true">Actions</string>
     </attribute>
    </widget>
-   <widget class="QPushButton" name="rt_data">
-    <property name="geometry">
-     <rect>
-      <x>350</x>
-      <y>60</y>
-      <width>281</width>
-      <height>28</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Real-time данные</string>
-    </property>
-    <attribute name="buttonGroup">
-     <string notr="true">Actions</string>
-    </attribute>
-   </widget>
    <widget class="QPushButton" name="equip_check">
     <property name="geometry">
      <rect>
       <x>350</x>
-      <y>100</y>
+      <y>70</y>
       <width>281</width>
-      <height>28</height>
+      <height>41</height>
      </rect>
     </property>
     <property name="text">
@@ -79,9 +63,9 @@
     <property name="geometry">
      <rect>
       <x>350</x>
-      <y>140</y>
+      <y>120</y>
       <width>281</width>
-      <height>28</height>
+      <height>41</height>
      </rect>
     </property>
     <property name="text">

@@ -47,9 +47,11 @@ class MainWin(QMainWindow, Ui_MainWindow):
         elif 'Контроль' in butt.text():
             dial = EquipWin()
             dial.exec()
+        '''
         elif "time" in butt.text():
             dial = RtWin()
             dial.exec()
+        '''
 
     def show_data(self):
         try:
