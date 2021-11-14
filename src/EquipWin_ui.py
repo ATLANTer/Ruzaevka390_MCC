@@ -49,11 +49,3 @@ class Ui_Dialog(object):
         self.label_2.setText(_translate("Dialog", "Сменить  частоту сканирования"))
         self.ch_freq.setText(_translate("Dialog", "Сменить"))
 
-Keyboard – это библиотека для работы с клавиатурой
-
-
-
-
-
-
-
